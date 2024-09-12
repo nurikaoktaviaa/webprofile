@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .nav-item {
+    @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+  }
+
+  .hero-ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+  }
+
+  /* Responsive adjustments for hero ring */
+  @media (min-width: 1024px) {
+    .hero-ring {
+      width: 1020px;
+      height: 1020px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-ring {
+      width: 1220px;
+      height: 1220px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .hero-ring {
+      width: 1420px;
+      height: 1420px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .hero-ring {
+      width: 1620px;
+      height: 1620px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .hero-ring {
+      width: 1820px;
+      height: 1820px;
+    }
+  }
+
+  /* Responsive adjustments for nav-item */
+  @media (min-width: 1024px) {
+    .nav-item {
+      @apply px-6 py-2 text-base; /* Penyesuaian padding dan ukuran teks untuk layar lg */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .nav-item {
+      @apply px-8 py-2.5 text-lg; /* Penyesuaian lebih lanjut untuk layar xl */
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .nav-item {
+      @apply px-8 py-2.5 text-xl; /* Penyesuaian lebih besar untuk layar yang lebih besar */
+    }
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
+}
